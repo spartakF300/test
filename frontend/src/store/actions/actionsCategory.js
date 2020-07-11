@@ -68,7 +68,7 @@ export const categoryEdit = (id,data)=>{
             dispatch(categoryRequest());
              await axiosApi.put('/category/'+id,data);
             dispatch(categorySuccess())
-
+            dispatch(push('/category'));
         }catch (e) {
             dispatch(categoryFailure(e))
         }

@@ -24,7 +24,7 @@ export const createArticle = data=>{
           dispatch(articleRequest());
           await axiosApi.post('/article',data);
           dispatch(articleSuccess())
-
+          dispatch(push('/article'));
       }catch (e) {
           dispatch(articleFailure(e))
       }
